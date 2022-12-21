@@ -15,7 +15,6 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-
 const rand = array => array[Math.floor(Math.random() * array.length)]
 
 const seedDB = async () => {
@@ -32,13 +31,8 @@ const seedDB = async () => {
         })
         await camp.save();
     }
-
 }
-
-
 
 seedDB().then(()=>{
     mongoose.connection.close();
 });
-
-
